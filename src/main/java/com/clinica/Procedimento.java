@@ -3,10 +3,15 @@ package main.java.com.clinica;
 public class Procedimento {
     private String descricaoProcedimento;
     private double valor;
+    private static int numCodigo = 1;
+    private String codigo;
 
     public Procedimento(String descricaoProcedimento, double valor) {
         this.descricaoProcedimento = descricaoProcedimento;
         this.valor = valor;
+
+        this.codigo = "PO"+numCodigo;
+        numCodigo++;
     }
 
     // Getters e Setters
@@ -22,6 +27,10 @@ public class Procedimento {
     }
     public void setValor(double valor) {
         this.valor = valor;
+    }
+
+    public String getCodigo() {
+        return codigo;
     }
 
     public String toString(){

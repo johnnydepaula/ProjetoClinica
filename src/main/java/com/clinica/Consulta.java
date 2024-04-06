@@ -21,16 +21,15 @@ public class Consulta {
         procedimentos.remove(procedimento);
     }
 
-//    // Método para calcular o valor da consulta
-//    public double calcularValorConsulta(Map<String, Double> precos) {
-//        double valorConsulta = 0.0;
-//        for (Procedimento procedimento : procedimentos) {
-//            if (precos.containsKey(procedimento)) {
-//                valorConsulta += precos.get(procedimento);
-//            }
-//        }
-//        return valorConsulta;
-//    }
+    public boolean existeProcedimento(String codigo) {
+        for (Procedimento procedimento : procedimentos) {
+            if (procedimento.getCodigo().equals(codigo)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     public double calcularConsulta(){
         double total = 0.0;

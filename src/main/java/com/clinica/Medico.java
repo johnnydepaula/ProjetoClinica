@@ -37,7 +37,7 @@ public class Medico {
     }
 
     public String getCodigo() {
-        return codigo+numCodigo;
+        return codigo;
     }
 
     // toString()

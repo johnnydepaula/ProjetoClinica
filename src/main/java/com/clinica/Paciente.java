@@ -8,10 +8,16 @@ public class Paciente {
     private String email;
     private LocalDate dataNascimento; // YYYY-MM-DD
 
+    private static int numCodigo = 1;
+    private String codigo;
+
     public Paciente(String nome, String email, LocalDate dataNascimento){
         this.nome = nome;
         this.email = email;
         this.dataNascimento = dataNascimento;
+
+        this.codigo = "PA"+numCodigo;
+        numCodigo++;
     }
 
     // Getters e Setters
@@ -26,6 +32,10 @@ public class Paciente {
     }
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getCodigo() {
+        return codigo;
     }
 
     // toString()
