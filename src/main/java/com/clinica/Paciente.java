@@ -1,21 +1,18 @@
 package main.java.com.clinica;
+import java.util.Locale;
+import java.time.LocalDate;
 
-public class Medico {
+
+public class Paciente {
     private String nome;
     private String email;
-    private String crm;
-    private static int numCodigo = 1;
-    private String codigo;
+    private LocalDate dataNascimento; // YYYY-MM-DD
 
-    public Medico(String nome, String email, String crm) {
+    public Paciente(String nome, String email, LocalDate dataNascimento){
         this.nome = nome;
         this.email = email;
-        this.crm = crm;
-
-        this.codigo = "ME"+numCodigo;
-        numCodigo++;
+        this.dataNascimento = dataNascimento;
     }
-
 
     // Getters e Setters
     public String getNome() {
@@ -24,7 +21,6 @@ public class Medico {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
     public String getEmail() {
         return email;
     }
@@ -32,19 +28,10 @@ public class Medico {
         this.email = email;
     }
 
-    public String getCrm() {
-        return crm;
-    }
-
-    public String getCodigo() {
-        return codigo+numCodigo;
-    }
-
     // toString()
     public String toString(){
-        return "Medico:\t\tDr(a) " +
-                getNome() + " – " +
-                "CRM: " + getCrm() +
+        return "Paciente:\tSr(a) " +
+                getNome() +
                 "\n\t\t\t" +
                 "("+getEmail()+")";
     }
