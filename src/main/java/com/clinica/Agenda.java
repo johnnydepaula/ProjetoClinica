@@ -17,7 +17,7 @@ public class Agenda {
     }
 
     public List<Consulta> getConsultas() {
-        return consultas;
+        return List.copyOf(consultas);
     }
 
     public int quantidadeConsultas() {
@@ -31,6 +31,4 @@ public class Agenda {
         }
         return total;
     }
-
-
 }
